@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'League Spartan';
+    src: url(font/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan';
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-size: 40% 45%, 70% 80%;
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.container {
+    width: 71%;
+}
+
+.container .top-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7%;
+}
+
+.title-box {
+    max-width: 345px;
+    margin-right: 10px;
+    color: var(--Very-Dark-Magenta);
+}
+
+.title-box h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.title-box p {
+    font-size: 15px;
+}
+
+.rating-box {
+    width: 35.8vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-card {
+    width: 30vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 7px;
+    background-color: var(--Light-Grayish-Magenta);
+}
+
+.rating-card .img-box {
+    display: flex;
+}
+
+.rating-card .img-box img {
+    margin: 0 3px;
+}
+
+.rating-card p {
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+}
+
+.review-card {
+    margin: 6px auto 6px 0;
+}
+
+.report-guru-card {
+    margin: 6px auto;
+}
+
+.besttech-card {
+    margin: 6px 0 6px auto;
+
+}
+
+.container .bottom-part {
+    height: 34.5vh;
+    display: flex;
+}
+
+.comment-card {
+    width: 22.6vw;
+    padding: 30px;
+    border-radius: 7px;
+    background-color: var(--Very-Dark-Magenta);
+    color: #fff;
+}
+
+.profile-box {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-box .avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.profile-box .name {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.profile-box .status {
+    font-size: 15px;
+    opacity: .5;
+}
+
+.comment-card .the-comment {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.colton-card {
+    margin: 0 auto auto 0;
+}
+
+.irene-card {
+    margin: auto auto;
+}
+
+.anne-card {
+    margin: auto 0 0 auto;
+}
+
+/* Tablet Size */
+@media (767px < width < 1023px) {
+    .rating-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 0;
+        padding: 10px;
+
+    }
+
+    .rating-card p {
+        margin: 10px 0 0 0;
+    }
+}
+
+/* Mobile Size */
+@media (width <=767px) {
+    body {
+        justify-content: initial;
+        background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+        background-size: 100% 30%, 100% 35%;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10%;
+    }
+
+    .container .top-part {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .title-box {
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .rating-box {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .rating-card {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 0;
+        padding: 10px;
+
+    }
+
+    .rating-card p {
+        margin: 10px 0 0 0;
+    }
+
+    .container .bottom-part {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .comment-card {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
